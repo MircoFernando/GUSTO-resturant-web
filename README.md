@@ -1,4 +1,4 @@
-#🍽️ GUSTO | Restaurant Website
+# 🍽️ GUSTO | Restaurant Website
 This is a simple, responsive restaurant website built using HTML, CSS, and JavaScript. It is part of my self-learning journey in web development and serves as a foundational project to explore modern web design concepts.
 
 #🚀 About the Project
