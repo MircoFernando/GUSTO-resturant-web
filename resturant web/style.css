@@ -1,0 +1,736 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Pacifico&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Miniver&family=Pacifico&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    /* Defining CSS variables for colors */
+    --white-color: #ffffff; /* White color */
+    --dark-color: #252525; /* Dark color */
+    --primary-color: #3b141c; /* Dark red color */
+    --secondary-color: #f3961c; /* Dark gray for nav background */
+    --text-color: #333; /* Dark text color */
+    --link-color: #ff6347; /* Tomato color for links */
+    --hover-color: #e5533d; /* Darker tomato color for hover effects */
+
+    --font-size-s: 0.9rem; /* Small font size */
+    --font-size-n: 1rem; /* Normal font size */
+    --font-size-m: 1.12rem; /* Medium font size */
+    --font-size-l: 1.5rem; /* Large font size */
+    --font-size-xl: 2rem; /* Extra large font size */ 
+    --font-size-xxl: 2.3rem; /* Extra large font size */
+
+    /*Font weights*/
+    --font-weight-normal: 400; /* Normal font weight */
+    --font-weight-medium: 500; /* Medium font weight */
+    --font-weight-semi-bold: 600; /* Semi-bold font weight */
+    --font-weight-bold: 700; /* Bold font weight */
+    --font-weight-extra-bold: 800; /* Extra bold font weight */
+
+    /* Border Radius */
+    --border-radius-s: 8px;
+    --border-radius-m: 10px;
+    --border-radius-circle: 50%;
+
+    /*Site max width*/
+    --site-max-width: 1300px; /* Maximum width for the site */
+}
+
+/* Styling for the whole website */
+ul {
+    list-style: none;
+
+}
+a{
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+    border: none;
+    background: none;
+    
+}
+img{ 
+    width: 100%;
+}
+/*Navbar Styling*/
+
+header {
+  /* background-color: var(--primary-color); */
+  /* background: transparent; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: 0.3s ease;
+  
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 30px;
+    max-width: var(--site-max-width);
+    transition: background-color 0.3s ease;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    
+
+    .nav-logo {
+      .logo-text {
+        color: var(--white-color);
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+
+      
+
+      .nav-item {
+        .nav-link {
+          padding: 10px 18px;
+          color: var(--white-color);
+          font-size: var(--font-size-m);
+          text-decoration: none;
+          transition: border-bottom 0.3s ease;
+
+          &:hover {
+            border-bottom: 5px solid var(--secondary-color);
+            color: var(--secondary-color);
+          }
+        }
+      }
+
+    }
+    
+  }
+  #menu-close-button,
+      #menu-open-button{
+        color: var(--white-color);
+        display: none;
+      }
+
+  
+}
+header.scrolled{
+  background: var(--primary-color);
+}
+
+
+
+/*Main Section*/
+.hero-section {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 2), rgba(0, 0, 0, 0)), url("./emerson-vieira-_aR4l6fj6wQ-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding-top: 10vh; 
+
+  .hero-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .title {
+      font-size: 10em;
+      font-weight: 100;
+      margin: 0;
+      font-family: "Pacifico", cursive;
+    }
+    .buttons {
+      display: flex;
+      gap: 20px;
+      margin-top: 30px;
+      font-size: large;
+      padding: 50px;
+
+      .order-now,
+      .contact{
+            padding: 15px 35px;
+            border-radius: var(--border-radius-m);
+            font-weight: var(--font-weight-medium);
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: 0.3s ease;
+      }
+
+      .order-now {
+        
+        padding: 20px;
+        color: var(--primary-color);
+        background: var(--secondary-color);
+      }
+
+      .contact {
+        border-color: var(--secondary-color);
+        color: var(--secondary-color);
+        background: transparent;
+            }
+
+        .order-now:hover,
+            .contact:hover {
+                transform: scale(1.05);
+            }
+        .contact:hover{
+            background: var(--secondary-color);
+            color: var(--primary-color);
+        }
+        }
+        .hero-about{
+        padding: 20px 40px;
+        font-size: var(--font-size-l );
+    }
+        .contact-no{
+          margin-top: 20px;
+          padding: 20px 40px;
+          font-size: var(--font-size-m);
+        }
+    }
+}
+
+.specials{
+  padding: 120px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title{
+      font-family: "Pacifico", cursive;
+      font-weight: lighter;
+      padding: 14px 20px;
+      font-size: var(--font-size-xl);
+      border-bottom: 5px solid var(--secondary-color);
+    }
+
+  .specials-details{
+    color: var(--primary-color);
+    width: 100%;
+    display: flex;
+    margin-top: 80px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+    gap: 50px;
+    transition: 0.3s ease;
+    
+    
+    
+
+    .food-item{
+        width: 500px;
+        border: 5px solid transparent; 
+        border-radius: var(--border-radius-m);        
+        overflow: hidden;          
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        transition: 0.3s ease;
+        
+    &:hover{
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+      .title-food{
+        font-weight: bolder;
+        justify-content: center;
+        border-bottom: 5px solid var(--secondary-color);
+        padding: 10px 10px;
+        margin-bottom: 10px;
+      }
+      .description{
+        font-weight: var(--font-weight-medium);
+      }
+      
+      
+    }
+    
+  }
+
+}
+
+/*Our story section*/
+.our-story{
+  display: flex;
+  padding: 100 0px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .story-details{
+    display: flex;
+    flex-direction: row;
+    
+
+    .story-img{
+      width: 50%;
+
+    }
+  .story-description{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: column;
+    color: var(--primary-color);
+    background: #cbcbcb;
+    
+    
+    .title{
+      padding: 20px 30px;
+      margin-bottom: 50px;
+      font-size: var(--font-size-xxl);
+      font-family: "Pacifico", cursive;
+      font-weight: lighter;
+      border-bottom: 5px solid var(--secondary-color);
+    }
+    .story-text{
+      padding:0px 100px 50px 50px;
+      font-size: var(--font-size-l);
+      
+
+    }
+  }
+  }
+}
+.our-menu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  padding: 100px 100px;
+  
+
+  .title{
+      padding: 20px 30px;
+      margin-bottom: 50px;
+      font-size: var(--font-size-xxl);
+      font-family: "Pacifico", cursive;
+      font-weight: lighter;
+      border-bottom: 5px solid var(--secondary-color);
+    }
+
+  .menu{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+    
+  
+    .menu-list{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px 30px;
+      width: 80%;
+      gap: 10px;
+      transition: 0.3s ease;
+      border-right: 2px solid var(--secondary-color);
+        
+      .menu-title{
+        display: flex;
+        padding: 20px;
+        
+      }
+
+      table{
+        padding: 0px;
+      }
+
+      td{
+        color: var(--primary-color);
+        
+      }
+      
+
+
+      .menu-list-name{
+        color: var(--primary-color);
+      }
+    }
+
+  }
+}
+
+.gallery{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0;
+
+  .image-container{
+    display: flex;
+    flex-direction: row;
+    
+
+    img{
+      width: 25%;
+      transition: 0.3s ease;
+
+      &:hover{
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+.our-chefs{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 100px 100px;
+
+  .chef-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+
+    .title{
+      padding: 20px 30px;
+      margin-bottom: 50px;
+      font-size: var(--font-size-xxl);
+      font-family: "Pacifico", cursive;
+      font-weight: lighter;
+      border-bottom: 5px solid var(--secondary-color);
+    }
+
+    .description{
+      
+      padding:0px 100px 50px 50px;
+      font-size: var(--font-size-l);
+    }
+
+  }
+}
+
+.contact{
+  background: rgb(41, 40, 40);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: center;
+  color: var(--white-color);
+  
+  
+
+  .contact-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 200px;
+    margin-top: 10%;
+
+    .info-block{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .title{
+      padding: 20px 30px;
+      margin-bottom: 50px;
+      font-size: var(--font-size-m);
+      color: var(--white-color);
+      font-weight: lighter;
+      border-bottom: 3px solid var(--secondary-color);
+    }
+    .description{
+      color:white;
+    }
+  }
+  .message-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+
+    fieldset{
+       display: flex;
+       display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px;
+        margin: 50px;
+        border-top: 2px solid var(--secondary-color);
+        border-left: transparent;
+        border-right: transparent;
+        width: 50%;
+        color: var(--white-color);
+        margin-bottom: 10%;
+
+        .introduction{
+          font-size: 30px;
+          margin-bottom: 20px;
+          text-align: center;
+          font-family: "Pacifico", cursive;
+          font-weight: var(--font-weight-normal)
+        }
+
+    textarea,
+    input{
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 10px;
+      font-size: 16px;
+      background: gray;
+      color: var(--white-color);
+      cursor: pointer;
+
+
+    }
+    }
+    .submit{
+      display: flex;
+      justify-content: center;
+      
+      
+      #message-btn{
+        color: var(--white-color);
+        padding: 10px 50px;
+        font-size: var(--font-size-l);
+        font-family: "Pacifico", cursive;
+        font-weight: lighter;
+        transition: 0.3s ease;
+        border: 3px solid var(--secondary-color);
+        border-radius: var(--border-radius-m);
+        margin: 10px;
+
+        &:hover{
+          background: var(--secondary-color);
+          color: var(--primary-color);
+          transform:scale(1.05) ;
+
+        }
+
+      }
+
+    }
+  }
+}
+footer{
+  display: flex;
+  justify-content:space-between ;
+  align-items: center;
+  width: 100%;
+  background: rgb(31, 30, 30);
+  padding: 20px 60px;
+
+
+  .license-msg{
+    color: gray;
+    font-weight: var(--font-weight-normal);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:x-small;
+    margin-left: 10%;
+
+  }
+
+  .social-img{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-right: 10%;
+    padding: 10px 50px;
+    cursor: pointer;
+    
+    img{
+      
+      color: #333;
+      padding: 2px;
+      margin: 5px;
+      width: 2rem;
+    }
+    
+  }
+}
+/*Responsive media query code*/
+@media screen and (max-width: 900px) {
+  .navbar {
+    #menu-close-button,
+    #menu-open-button {
+      font-size: 1.3rem;
+      display: block;
+    }
+
+    #menu-close-button {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      color: white;
+    }
+
+    #menu-open-button {
+      color: var(--white-color);
+    }
+
+    .logo-text {
+      display: flex;
+      position: fixed;
+      align-items: center;
+      margin-top: 10px;
+      z-index: 2;
+    }
+
+    .nav-links {
+      display: flex;
+      position: fixed;
+      flex-direction: column;
+      left: -100%; 
+      top: 0;
+      width: 300px;
+      height: 100vh;
+      align-items: center;
+      padding-top: 100px;
+      background: var(--primary-color);
+      color: var(--dark-color);
+      transition: left 0.3s ease;
+
+      .nav-item {
+        color: var(--dark-color);
+        font-size: var(--font-size-xxl);
+        margin: 20px 0;
+      }
+    }
+  }
+
+  
+  body.show-mobile-menu .navbar .nav-links {
+    left: 0;
+  }
+
+  .hero-section{
+
+     .hero-details{
+      .title{
+        font-size: 8rem;
+      }
+      .hero-about{
+        font-size: 1.5rem;
+        margin-top: 10px;
+      }
+
+      .contact-no{
+        margin: 10px;
+      }
+     } 
+  }
+  .our-story{
+    .story-details{
+      flex-direction: column;
+
+      .story-img{
+        width: 100%;
+      }
+
+      .story-description{
+        align-items: center;
+        justify-content: center;
+      .story-text{
+        font-size: 1rem;
+        
+      }
+    }
+  }
+}
+.our-menu{
+    padding: 2px;
+
+    .title{
+      margin-bottom: 20px;
+    }
+  .menu{
+    flex-direction: column;
+
+    .menu-list{
+      border: 2px solid var(--secondary-color);
+    }
+  }
+}
+.gallery{
+  .image-container{
+    
+
+    img{
+      width: 100%;
+    }
+  }
+
+}
+.our-chefs{
+  padding: 10%;
+  align-items: center;
+  flex-direction: column;
+  .chef-info{
+    align-items: center;
+    justify-content: center;
+    .title{
+      font-size: 2rem;
+      text-align: center;
+    }
+    .description{
+      font-size: 1rem;
+    }
+  }
+}
+
+.contact{
+  .contact-info{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    gap:10px;
+    margin-top:2px;
+
+    .info-block{
+
+      font-size: 0.5rem;
+      margin:10px;
+
+      .title{
+        font-size: 0.8rem;;
+      }
+    }
+  }
+}
+.footer{
+  padding-top: 5px;
+  font-size: 1rem;
+
+  .license-msg{
+    .text{
+      font-size: 0.5rem;
+    }
+  }
+}
+
+}            
+
